@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Black Cellist</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="formatos_index.css">
+</head>
+<body>
+
+    <header>
+        <h1>Andrés Valadez Péres — Black Cellist </h1>
+        <p>Violonchelista, Tatuador, estudiante de software.</p>
+      
+    </header>
+
+    <section id="sobre-mi"> <div>
+        <h2>Sobre mí</h2>
+        <p>Licenciado en Ciencias del Comportamiento Humano. Me gusta la filosofia y hacer musica ademas de estudiar Ingenieria en Desarrollo de Software.</p>
+        </div>
+       
+
+    </section>
+
+    <section id="habilidades">
+        <h2>Habilidades</h2>
+        <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Diseño técnico y artístico</li>
+            <li>Tatuaje y composición visual</li>
+        </ul>
+    </section>
+
+    <section id="galeria">
+        <h2>Galería</h2>
+         <div class="contenedor-galeria">
+        <img src="yo.jpg" alt="foto 1">
+        <img src="yo2.jpg" alt="foto 2">
+        <img src="yo3.jpg" alt="foto 3">
+    </div>
+
+    </section>
+    <!-- Lightbox --> 
+     <div id="lightbox">
+    <img id="lightbox-img" src="">
+     </div>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Correo: notamarron@gmail.com</p>
+        <div class="titulo-de-gif"><p>Correle a contactarme</p>
+        <div class="tenor-gif-embed" data-postid="5081601" data-share-method="host" data-aspect-ratio="1.265" data-width="100%">
+            <a href="https://tenor.com/view/woody-allen-funny-cello-gif-5081601">Woody Allen GIF</a>from 
+            <a href="https://tenor.com/search/woody-gifs">Woody GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js">   
+            </script>
+            </div>
+        
+    </section>
+    <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    document.querySelectorAll('.contenedor-galeria img').forEach(img => {
+        img.addEventListener('click', () => {
+            lightboxImg.src = img.src;
+            lightbox.style.display = 'flex';
+        });
+    });
+
+    lightbox.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+    });
+</script>
+
+
+</body>
+</html>
